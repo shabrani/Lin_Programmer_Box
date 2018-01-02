@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0CC94912-4F5C-40B6-B3E2-475EE8F42970}</ProjectGuid>
+    <RootNamespace>LIN_Programming</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\IVI Foundation\VISA\WinNT\include;C:\Program Files %28x86%29\National Instruments\MeasurementStudioVS2012\VCNET\Include;C:\Program Files %28x86%29\Kvaser\Canlib\INC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\IVI Foundation\VISA\WinNT\lib\msc;C:\Program Files %28x86%29\National Instruments\MeasurementStudioVS2012\VCNET\Lib;C:\Program Files %28x86%29\Kvaser\Canlib\Lib\MS;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>linlib.lib;visa32.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CDlg_DataFilePath.h" />
+    <ClInclude Include="CDlg_Diagnostic_FRDM.h" />
+    <ClInclude Include="CDlg_PasswordChange.h" />
+    <ClInclude Include="CDlg_PasswordCheck.h" />
+    <ClInclude Include="CDlg_Spec.h" />
+    <ClInclude Include="CDlg_Spec_Item.h" />
+    <ClInclude Include="CDlg_Spec_Item_CR665.h" />
+    <ClInclude Include="CDlg_Spec_Item_L9916.h" />
+    <ClInclude Include="CDlg_Spec_Item_LIN2112.h" />
+    <ClInclude Include="CDlg_Spec_Item_Set_etc.h" />
+    <ClInclude Include="CDlg_Spec_Item_TLE8880.h" />
+    <ClInclude Include="CDlg_Spec_Item_TLE8881.h" />
+    <ClInclude Include="CFunc_BackupFile.h" />
+    <ClInclude Include="CFunc_Beep.h" />
+    <ClInclude Include="CFunc_DB_Dao.h" />
+    <ClInclude Include="CFunc_DB_Odbc.h" />
+    <ClInclude Include="CFunc_DelayTime.h" />
+    <ClInclude Include="CFunc_File.h" />
+    <ClInclude Include="CFunc_FilePath.h" />
+    <ClInclude Include="CFunc_Mode_Vector.h" />
+    <ClInclude Include="CFunc_Reg.h" />
+    <ClInclude Include="CFunc_Spec.h" />
+    <ClInclude Include="CFunc_Spec_File.h" />
+    <ClInclude Include="CFunc_Spec_Item.h" />
+    <ClInclude Include="CFunc_Spec_Item_Main.h" />
+    <ClInclude Include="CFunc_Spec_Item_Main_Mode.h" />
+    <ClInclude Include="CFunc_TestData.h" />
+    <ClInclude Include="CFunc_TestData_SaveAccess.h" />
+    <ClInclude Include="CFunc_UserMsg.h" />
+    <ClInclude Include="CInst_Base.h" />
+    <ClInclude Include="CInst_Main.h" />
+    <ClInclude Include="CLin_Data.h" />
+    <ClInclude Include="CLin_Func_Main.h" />
+    <ClInclude Include="CSerial_Func_FRDM.h" />
+    <ClInclude Include="CSerial_Func_Main.h" />
+    <ClInclude Include="CTest_Base.h" />
+    <ClInclude Include="CTest_Main.h" />
+    <ClInclude Include="CTest_State.h" />
+    <ClInclude Include="CTest_Status_Test_Result.h" />
+    <ClInclude Include="CTest_System_Config.h" />
+    <ClInclude Include="KvrLin.h" />
+    <ClInclude Include="LIN_Programming.h" />
+    <ClInclude Include="LIN_ProgrammingDoc.h" />
+    <ClInclude Include="LIN_ProgrammingView.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MyHeaderCtrl.h" />
+    <ClInclude Include="MyListCtrl.h" />
+    <ClInclude Include="My_String.h" />
+    <ClInclude Include="procedure.h" />
+    <ClInclude Include="procedure_Macro.h" />
+    <ClInclude Include="procedure_Number.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Rijndael.h" />
+    <ClInclude Include="specfile_form.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="tmenu_file.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CDlg_DataFilePath.cpp" />
+    <ClCompile Include="CDlg_Diagnostic_FRDM.cpp" />
+    <ClCompile Include="CDlg_PasswordChange.cpp" />
+    <ClCompile Include="CDlg_PasswordCheck.cpp" />
+    <ClCompile Include="CDlg_Spec.cpp" />
+    <ClCompile Include="CDlg_Spec_Item.cpp" />
+    <ClCompile Include="CDlg_Spec_Item_CR665.cpp" />
+    <ClCompile Include="CDlg_Spec_Item_L9916.cpp" />
+    <ClCompile Include="CDlg_Spec_Item_LIN2112.cpp" />
+    <ClCompile Include="CDlg_Spec_Item_Set_etc.cpp" />
+    <ClCompile Include="CDlg_Spec_Item_TLE8880.cpp" />
+    <ClCompile Include="CDlg_Spec_Item_TLE8881.cpp" />
+    <ClCompile Include="CFunc_BackupFile.cpp" />
+    <ClCompile Include="CFunc_Beep.cpp" />
+    <ClCompile Include="CFunc_DB_Dao.cpp" />
+    <ClCompile Include="CFunc_DB_Odbc.cpp" />
+    <ClCompile Include="CFunc_DelayTime.cpp" />
+    <ClCompile Include="CFunc_File.cpp" />
+    <ClCompile Include="CFunc_FilePath.cpp" />
+    <ClCompile Include="CFunc_Mode_Vector.cpp" />
+    <ClCompile Include="CFunc_Reg.cpp" />
+    <ClCompile Include="CFunc_Spec.cpp" />
+    <ClCompile Include="CFunc_Spec_File.cpp" />
+    <ClCompile Include="CFunc_Spec_File_TM01LIN.cpp" />
+    <ClCompile Include="CFunc_Spec_Item.cpp" />
+    <ClCompile Include="CFunc_Spec_Item_Main.cpp" />
+    <ClCompile Include="CFunc_Spec_Item_Main_Mode.cpp" />
+    <ClCompile Include="CFunc_TestData.cpp" />
+    <ClCompile Include="CFunc_TestData_SaveAccess.cpp" />
+    <ClCompile Include="CFunc_UserMsg.cpp" />
+    <ClCompile Include="CInst_Base.cpp" />
+    <ClCompile Include="CInst_Main.cpp" />
+    <ClCompile Include="CLin_Data.cpp" />
+    <ClCompile Include="CLin_Func_Main.cpp" />
+    <ClCompile Include="CSerial_Func_FRDM.cpp" />
+    <ClCompile Include="CSerial_Func_Main.cpp" />
+    <ClCompile Include="CTest_Base.cpp" />
+    <ClCompile Include="CTest_Main.cpp" />
+    <ClCompile Include="CTest_Main_kvrLin.cpp" />
+    <ClCompile Include="CTest_State.cpp" />
+    <ClCompile Include="CTest_Status_Test_Result.cpp" />
+    <ClCompile Include="CTest_System_Config.cpp" />
+    <ClCompile Include="LIN_Programming.cpp" />
+    <ClCompile Include="LIN_ProgrammingDoc.cpp" />
+    <ClCompile Include="LIN_ProgrammingView.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MyHeaderCtrl.cpp" />
+    <ClCompile Include="MyListCtrl.cpp" />
+    <ClCompile Include="My_String.cpp" />
+    <ClCompile Include="procedure.cpp" />
+    <ClCompile Include="Rijndael.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="tmenu_file.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LIN_Programming.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\LIN_Programming.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\LIN_Programming.ico" />
+    <Image Include="res\LIN_ProgrammingDoc.ico" />
+    <Image Include="res\Toolbar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="beep1.wav" />
+    <Media Include="beep2.wav" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="LIN_Programming.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
