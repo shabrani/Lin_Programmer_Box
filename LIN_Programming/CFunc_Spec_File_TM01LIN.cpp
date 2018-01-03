@@ -594,7 +594,7 @@ bool CFunc_Spec_File::f_Save_CSpec_to_SFile  ()
 	CString SErrMsg;
 
 
-	CString		Sfilename = m_pCSpec->m_stStatus.strFilename;
+	CString	Sfilename = m_pCSpec->m_stStatus.strFilename;
 
 	
 
@@ -616,7 +616,6 @@ bool CFunc_Spec_File::f_Save_CSpec_to_SFile  ()
 	
     TRY
     {
-
 		strSQL.Format ( "DRIVER={%s};DSN='';READONLY=FALSE;DBQ=%s", 
 		sDriver.GetString(), Sfilename.GetString());
 		
@@ -723,13 +722,13 @@ bool CFunc_Spec_File::f_Save_Table_100_SpecITem_Main (CDatabase &database)
     TRY
     {
 		{
-			strBuf.Format("DELETE FROM %s", strTableName.GetString());							// Table data 초기화 (삭제)
+			strBuf.Format("DELETE FROM %s", TM01LIN_DBTABLE_TESTSPEC_MAIN);							// Table data 초기화 (삭제)
 			database.ExecuteSQL(strBuf);
 		}
 
 		for ( pnum = 0; pnum < nFinal; pnum++)
 		{
-			strBuf.Format("Insert Into %s (%s) values (%d)", strTableName.GetString(), "PNUM", pnum);
+			strBuf.Format("Insert Into %s (%s) values (%d)", TM01LIN_DBTABLE_TESTSPEC_MAIN, "PNUM", pnum);
 			database.ExecuteSQL( strBuf );
 		}
 
@@ -745,7 +744,7 @@ bool CFunc_Spec_File::f_Save_Table_100_SpecITem_Main (CDatabase &database)
 
 			m_odbcFunc.f_SQL_Update_AddString_CStr  (strSQL, "20_SPEC_SYMBOL",	pTitem->Spec.strTestSymbol,	CH_COMMA);
 			m_odbcFunc.f_SQL_Update_AddString_CStr  (strSQL, "20_SPEC_NAME",	pTitem->Spec.strTestName,	CH_COMMA);		
-			m_odbcFunc.f_SQL_Update_AddString_CStr  (strSQL, "20_SPEC_UNIT",	pTitem->Spec.strTestUnit,	CH_COMMA);	
+			m_odbcFunc.f_SQL_Update_AddString_CStr  (strSQL, "20_SPEC_UINT",	pTitem->Spec.strTestUnit,	CH_COMMA);	
 
 			switch(pTitem->Spec.stDataFmt.nMode)
 			{
@@ -769,15 +768,14 @@ bool CFunc_Spec_File::f_Save_Table_100_SpecITem_Main (CDatabase &database)
 			m_odbcFunc.f_SQL_Update_AddString_uint   (strSQL, "40_MODE_LIMIT",	pTitem->Spec.stLimit.nMode, CH_COMMA);	
 			m_odbcFunc.f_SQL_Update_AddString_text   (strSQL, "40_DATA_FORMAT",	pTitem->Spec.strDataFormat, CH_COMMA);
 
-			int nIndex = m_pCSpec->f_modeTable_find_vec_record (pTitem->Spec.nRefTitem, m_pCSpec->m_stMode.vInfoRefFuncTitem);
+			{
+				int nIndex = m_pCSpec->f_modeTable_find_vec_record(pTitem->Spec.nRefTitem, m_pCSpec->m_stMode.vInfoRefFuncTitem);
 
-			m_odbcFunc.f_SQL_Update_AddString_uint	(strSQL, "90_TEST_REFITEM_INDEX",pTitem->Spec.nRefTitem, CH_COMMA);	
-			m_odbcFunc.f_SQL_Update_AddString_text	(strSQL, "90_TEST_REFITEM_TEXT", m_pCSpec->m_stMode.vInfoRefFuncTitem[nIndex].sInfo.GetString(), CH_BLANK);
-
+				m_odbcFunc.f_SQL_Update_AddString_uint(strSQL, "90_TEST_REFITEM_INDEX", pTitem->Spec.nRefTitem, CH_COMMA);
+				m_odbcFunc.f_SQL_Update_AddString_text(strSQL, "90_TEST_REFITEM_TEXT", m_pCSpec->m_stMode.vInfoRefFuncTitem[nIndex].sInfo.GetString(), CH_BLANK);
+			}
 	
-			strBuf.Format ("%cwhere PNUM=%d", CH_BLANK, pnum );	
-			
-			strSQL += strBuf;
+			strBuf.Format ("%cwhere PNUM=%d", CH_BLANK, pnum );	strSQL += strBuf;
 		
 			database.ExecuteSQL(strSQL.GetString());
 		}

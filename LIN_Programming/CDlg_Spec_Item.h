@@ -88,7 +88,5 @@ public:
 	
 	afx_msg void OnDestroy();
 	afx_msg void OnCbnSelchangeComboDataType();
-
-
 	afx_msg void OnCbnSelchangeComboLimitMode();
 };

@@ -250,7 +250,7 @@ void CDlg_Spec_Item::f_spec_save_to_CSpec (unsigned pnum)
 {
 	this->UpdateData (TRUE);
 	
-	this->m_var.pTitem	= &m_var.pCSpec->m_vTitem[pnum];
+	this->m_var.pTitem = &m_var.pCSpec->m_vTitem[pnum];
 	
 	CFunc_Spec_Item_Main			*pItemSpec;
 	pItemSpec = &m_var.pCSpec->m_vTitem[pnum].Spec;
@@ -267,10 +267,10 @@ void CDlg_Spec_Item::f_spec_save_to_CSpec (unsigned pnum)
 
 	int nIndex;	
 	nIndex = this->m_combo_RefTitem.GetCurSel ();
-	pItemSpec->nRefTitem	 = m_var.pCSpec->m_stMode.vInfoRefFuncTitem[nIndex].nId;	
+	pItemSpec->nRefTitem = m_var.pCSpec->m_stMode.vInfoRefFuncTitem[nIndex].nId;	
 	
-	pItemSpec->stLimit.nMode		= m_var.pCSpec->m_stMode.ItemMode.m_DataLimitMode.f_cbox_GetCurSel(m_combo_LimitMode);
-	pItemSpec->stDataFmt.nMode	= m_var.pCSpec->m_stMode.ItemMode.m_DataFormat.f_cbox_GetCurSel(m_combo_DataType);
+	pItemSpec->stLimit.nMode = m_var.pCSpec->m_stMode.ItemMode.m_DataLimitMode.f_cbox_GetCurSel(m_combo_LimitMode);
+	pItemSpec->stDataFmt.nMode = m_var.pCSpec->m_stMode.ItemMode.m_DataFormat.f_cbox_GetCurSel(m_combo_DataType);
 
 
 	switch(m_var.pTitem->Spec.stDataFmt.nMode )

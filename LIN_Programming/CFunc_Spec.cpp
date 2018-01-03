@@ -380,6 +380,7 @@ void CFunc_Spec::f_titem_stable_sort_with_isFuncTest (std::vector<CFunc_Spec_Ite
 		}
 	}
 
+	/*
 	if (nCount == 0)
 	{
 		std::stable_sort (v.begin(), v.end(), Compare_RefTestItem() );
@@ -392,13 +393,13 @@ void CFunc_Spec::f_titem_stable_sort_with_isFuncTest (std::vector<CFunc_Spec_Ite
 	{
 
 	}
+	*/
 
-
-	int nNext, nPrev;
-	for (nIdx=0; nIdx<nSize; nIdx++) v[nIdx].Spec.nPnum_Next = nIdx;
-	for (nIdx=0; nIdx<nSize; nIdx++) v[nIdx].Spec.nPnum_Prev = nIdx;
+//	int nNext, nPrev;
+//	for (nIdx=0; nIdx<nSize; nIdx++) v[nIdx].Spec.nPnum_Next = nIdx;
+//	for (nIdx=0; nIdx<nSize; nIdx++) v[nIdx].Spec.nPnum_Prev = nIdx;
 	
-
+/*
 	for (nIdx=0; nIdx<nSize; nIdx++)
 	{
 		if ( ( true == v[nIdx].Spec.Option.isPowerOnTest) & v[nIdx].Spec.Option.isTest)
@@ -442,7 +443,7 @@ void CFunc_Spec::f_titem_stable_sort_with_isFuncTest (std::vector<CFunc_Spec_Ite
 			}
 		}
 	}
-
+	*/
 }
 
 
