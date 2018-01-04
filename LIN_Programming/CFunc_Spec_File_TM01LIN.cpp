@@ -275,18 +275,18 @@ bool CFunc_Spec_File::f_extract_SpecInfo_LIN_from_CDatabase(CDatabase &database)
 
 
 	//SPECFORM REVNO가 없으면 이름을 고체한다. 
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u8 (vec_proc, "NVM_A0",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr00)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u8 (vec_proc, "NVM_A1",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr01)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u8 (vec_proc, "NVM_A2",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr02)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u8 (vec_proc, "NVM_A3",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr03)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u8 (vec_proc, "NVM_A4",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr04)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u8 (vec_proc, "NVM_A5",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr05)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u8 (vec_proc, "NVM_A6",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr06)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u8 (vec_proc, "NVM_A7",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr07)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u8 (vec_proc, "NVM_A8",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr08)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u8 (vec_proc, "NVM_A9",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr09)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u8 (vec_proc, "NVM_A10",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr10)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u8 (vec_proc, "NVM_A11",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr11)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u8(vec_proc, "NVM_A0",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr00)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u8(vec_proc, "NVM_A1",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr01)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u8(vec_proc, "NVM_A2",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr02)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u8(vec_proc, "NVM_A3",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr03)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u8(vec_proc, "NVM_A4",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr04)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u8(vec_proc, "NVM_A5",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr05)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u8(vec_proc, "NVM_A6",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr06)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u8(vec_proc, "NVM_A7",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr07)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u8(vec_proc, "NVM_A8",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr08)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u8(vec_proc, "NVM_A9",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr09)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u8(vec_proc, "NVM_A10",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr10)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u8(vec_proc, "NVM_A11",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr11)) return false;
 	
 	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u32 (vec_proc, "FID_RX",	m_pCSpec->m_stSpecInfo.Lin.Fid.nRx)) return false;
 	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u32 (vec_proc, "FID_TX1",	m_pCSpec->m_stSpecInfo.Lin.Fid.nTx1)) return false;
