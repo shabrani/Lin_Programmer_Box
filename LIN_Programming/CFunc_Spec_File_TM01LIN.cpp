@@ -288,17 +288,17 @@ bool CFunc_Spec_File::f_extract_SpecInfo_LIN_from_CDatabase(CDatabase &database)
 	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u8(vec_proc, "NVM_A10",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr10)) return false;
 	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u8(vec_proc, "NVM_A11",	m_pCSpec->m_stSpecInfo.Lin.Nvm.Addr11)) return false;
 	
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u32 (vec_proc, "FID_RX",	m_pCSpec->m_stSpecInfo.Lin.Fid.nRx)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u32 (vec_proc, "FID_TX1",	m_pCSpec->m_stSpecInfo.Lin.Fid.nTx1)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u32 (vec_proc, "FID_TX2",	m_pCSpec->m_stSpecInfo.Lin.Fid.nTx2)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u32 (vec_proc, "FID_TX3",	m_pCSpec->m_stSpecInfo.Lin.Fid.nTx3)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u32(vec_proc, "FID_RX",	m_pCSpec->m_stSpecInfo.Lin.Fid.nRx)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u32(vec_proc, "FID_TX1",	m_pCSpec->m_stSpecInfo.Lin.Fid.nTx1)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u32(vec_proc, "FID_TX2",	m_pCSpec->m_stSpecInfo.Lin.Fid.nTx2)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u32(vec_proc, "FID_TX3",	m_pCSpec->m_stSpecInfo.Lin.Fid.nTx3)) return false;
 
 	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_CStr		  (vec_proc, "M_INTERFACE",	m_pCSpec->m_stSpecInfo.Lin.sInterface)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u32 (vec_proc, "M_CHIP",		m_pCSpec->m_stSpecInfo.Lin.nChip)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u32 (vec_proc, "M_REGULATOR",	m_pCSpec->m_stSpecInfo.Lin.nRegulator)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u32 (vec_proc, "M_BAUDRATE",	m_pCSpec->m_stSpecInfo.Lin.nBaudrate)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u32 (vec_proc, "M_VERSION",	m_pCSpec->m_stSpecInfo.Lin.nVersion)) return false;
-	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_hex_to_u32 (vec_proc, "M_WAIT_TIME",	m_pCSpec->m_stSpecInfo.Lin.nWaitTime)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u32(vec_proc, "M_CHIP",		m_pCSpec->m_stSpecInfo.Lin.nChip)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u32(vec_proc, "M_REGULATOR",	m_pCSpec->m_stSpecInfo.Lin.nRegulator)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u32(vec_proc, "M_BAUDRATE",	m_pCSpec->m_stSpecInfo.Lin.nBaudrate)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u32(vec_proc, "M_VERSION",	m_pCSpec->m_stSpecInfo.Lin.nVersion)) return false;
+	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_u32(vec_proc, "M_WAIT_TIME",	m_pCSpec->m_stSpecInfo.Lin.nWaitTime)) return false;
 
 	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_float (vec_proc, "VOLTAGE",	m_pCSpec->m_stSpecInfo.Lin.fVoltage)) return false;
 	if (true != m_odbcFunc.f_extract_SpecInfo_from_vRecord_float (vec_proc, "CURRENT",	m_pCSpec->m_stSpecInfo.Lin.fCurrent)) return false;

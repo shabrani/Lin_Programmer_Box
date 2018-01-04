@@ -200,17 +200,21 @@ void CDlg_Spec_Item::f_spec_load_from_CSpec (unsigned pnum)
 	CFunc_Spec_Item_Main			*pItemSpec;
 	pItemSpec = &m_var.pCSpec->m_vTitem[pnum].Spec;
 
+	
+	this->m_cwn_nTnum.SetValue (pItemSpec->nTnum);
 
-
-	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	this->m_edit_Unit			= pItemSpec->strTestUnit;
 	this->m_edit_Symbol			= pItemSpec->strTestSymbol;
 	this->m_edit_TestName		= pItemSpec->strTestName;
 	this->m_edit_DataFormat		= pItemSpec->strDataFormat;
 
-	this->m_cwn_nTnum.SetValue (pItemSpec->nTnum);
+	///////////////////////////////////////////////////////////////////////////////////////////////
+	TS_CSPEC_SPECINFO_LIN	*pLin;
+	pLin = &this->m_var.pCSpec->m_stSpecInfo.Lin;
 
+	this->m_edit_Baudrate.SetValue(pLin->nBaudrate);
 
+	///////////////////////////////////////////////////////////////////////////////////////////////
 	
 
 	int nIndex	 = m_var.pCSpec->f_modeTable_find_vec_record (pItemSpec->nRefTitem, m_var.pCSpec->m_stMode.vInfoRefFuncTitem );	
@@ -238,7 +242,6 @@ void CDlg_Spec_Item::f_spec_load_from_CSpec (unsigned pnum)
 
 		break;	
 	}
-	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	this->f_page_load_from_CSpec(pnum);
 
@@ -258,12 +261,19 @@ void CDlg_Spec_Item::f_spec_save_to_CSpec (unsigned pnum)
 	///////////////////////////////////////////////////////////////////////////////////////////////
 	pItemSpec->nTnum	= (unsigned) this->m_cwn_nTnum.GetValue ();
 
-	///////////////////////////////////////////////////////////////////////////////////////////////
+	
 	pItemSpec->strTestUnit	= this->m_edit_Unit;
 	pItemSpec->strTestSymbol= this->m_edit_Symbol;
 	pItemSpec->strTestName	= this->m_edit_TestName;
 	pItemSpec->strDataFormat= this->m_edit_DataFormat;
 
+	///////////////////////////////////////////////////////////////////////////////////////////////
+	TS_CSPEC_SPECINFO_LIN	*pLin;
+	pLin = &this->m_var.pCSpec->m_stSpecInfo.Lin;
+
+	pLin->nBaudrate = (unsigned)this->m_edit_Baudrate.GetValue();
+
+	///////////////////////////////////////////////////////////////////////////////////////////////
 
 	int nIndex;	
 	nIndex = this->m_combo_RefTitem.GetCurSel ();
