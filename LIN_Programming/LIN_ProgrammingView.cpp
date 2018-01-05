@@ -27,7 +27,6 @@
 #include "CDlg_PasswordCheck.h"
 #include "CDlg_PasswordChange.h"
 #include "CDlg_DataFilePath.h"
-#include "CDlg_Diagnostic_FRDM.h"
 
 #include "Rijndael.h"
 
@@ -82,7 +81,6 @@ BEGIN_MESSAGE_MAP(CLIN_ProgrammingView, CFormView)
 	ON_COMMAND(ID_MENU_SPECEDIT,	OnMenuSpecEdit)
 	ON_COMMAND(ID_MENU_CHANGEPASSWORD, OnMenuChangePassword)
 	ON_COMMAND(ID_EDIT_DATAFILESAVEPATH, OnMenuChangeDataFileSavePath)
-	ON_COMMAND(ID_DIAGNOSTIC_FRDM,	OnMenuDiagnosticFRDM)
 
 
 END_MESSAGE_MAP()
@@ -599,22 +597,6 @@ void CLIN_ProgrammingView::OnMenuChangeDataFileSavePath()
 	dlg.DoModal ();	
 }
 
-void CLIN_ProgrammingView::OnMenuDiagnosticFRDM ()
-{
-	if (pTest->m_cState.Status.isTestRun) return;
-	this->f_remote_start_stop_and_state_save();
-
-	if (pTest->m_cState.Status.bEngMode == false) 
-	{
-		AfxMessageBox("This is Work Mode. Please Set ENG Mode!");
-		return ;
-	}
-
-	CDlg_Diagnostic_FRDM dlg;
-	dlg.DoModal ();
-
-	this->f_remote_start_state_restore();
-}
 
 void CLIN_ProgrammingView::ClickCnbSelSpec()
 {

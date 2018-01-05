@@ -153,9 +153,6 @@
     <ClInclude Include="CDlg_Spec_Item_TLE8880.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CDlg_Diagnostic_FRDM.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CFunc_Beep.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -306,9 +303,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CDlg_Spec_Item_TLE8880.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CDlg_Diagnostic_FRDM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CTest_Main_kvrLin.cpp">

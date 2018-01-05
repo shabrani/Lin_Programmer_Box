@@ -36,7 +36,7 @@ int CTest_Main::f_kvr_LINREG_CR665_Init_VERIFY_MODE	(unsigned nline)
 	msg[6] = 0xFF;
 	msg[7] = 0xFF;
 	this->m_pLin->SendRX_and_Read(0x3C, msg, length, linBuf, 100);
-//	WndDisplay_TestLinMsg(nline, linBuf);
+	WndDisplay_TestLinMsg(nline, linBuf);
 	f_delay_ms(1);
 
 	msg[0] = 0x90;
@@ -48,7 +48,7 @@ int CTest_Main::f_kvr_LINREG_CR665_Init_VERIFY_MODE	(unsigned nline)
 	msg[6] = 0xFF;
 	msg[7] = 0xFF;
 	this->m_pLin->SendRX_and_Read(0x3C, msg, length, linBuf, 100);
-//	WndDisplay_TestLinMsg(nline+1, linBuf);
+	WndDisplay_TestLinMsg(nline+1, linBuf);
 
 	return 0; 
 }
@@ -69,7 +69,7 @@ int CTest_Main::f_kvr_LINREG_CR665_Finish	(unsigned p, unsigned nline)
 	msg[6] = 0xFF;
 	msg[7] = 0xFF;
 	this->m_pLin->SendRX_and_Read(0x3C, msg, length, linBuf, 100);
-//	WndDisplay_TestLinMsg(nline, linBuf);
+	WndDisplay_TestLinMsg(nline, linBuf);
 
 	return 0;
 }
@@ -94,7 +94,7 @@ int CTest_Main::f_kvr_LINREG_CR665_Addr_Verify (unsigned p, unsigned nline, unsi
 	f_delay_ms(1);
 
 	this->m_pLin->SendTX_and_Read(0x3D, linBuf, 100);
-//	WndDisplay_TestLinMsg(nline, linBuf);
+	WndDisplay_TestLinMsg(nline, linBuf);
 	f_delay_ms(1);
 
 	if (linBuf.Data[0] != exp)

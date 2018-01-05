@@ -107,7 +107,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CDlg_DataFilePath.h" />
-    <ClInclude Include="CDlg_Diagnostic_FRDM.h" />
     <ClInclude Include="CDlg_PasswordChange.h" />
     <ClInclude Include="CDlg_PasswordCheck.h" />
     <ClInclude Include="CDlg_Spec.h" />
@@ -166,7 +165,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CDlg_DataFilePath.cpp" />
-    <ClCompile Include="CDlg_Diagnostic_FRDM.cpp" />
     <ClCompile Include="CDlg_PasswordChange.cpp" />
     <ClCompile Include="CDlg_PasswordCheck.cpp" />
     <ClCompile Include="CDlg_Spec.cpp" />
