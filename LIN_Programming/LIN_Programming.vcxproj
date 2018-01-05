@@ -138,8 +138,6 @@
     <ClInclude Include="CInst_Main.h" />
     <ClInclude Include="CLin_Data.h" />
     <ClInclude Include="CLin_Func_Main.h" />
-    <ClInclude Include="CSerial_Func_FRDM.h" />
-    <ClInclude Include="CSerial_Func_Main.h" />
     <ClInclude Include="CTest_Base.h" />
     <ClInclude Include="CTest_Main.h" />
     <ClInclude Include="CTest_State.h" />
@@ -197,8 +195,6 @@
     <ClCompile Include="CInst_Main.cpp" />
     <ClCompile Include="CLin_Data.cpp" />
     <ClCompile Include="CLin_Func_Main.cpp" />
-    <ClCompile Include="CSerial_Func_FRDM.cpp" />
-    <ClCompile Include="CSerial_Func_Main.cpp" />
     <ClCompile Include="CTest_Base.cpp" />
     <ClCompile Include="CTest_Main.cpp" />
     <ClCompile Include="CTest_Main_kvrLin.cpp" />

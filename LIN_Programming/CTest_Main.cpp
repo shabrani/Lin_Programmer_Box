@@ -47,11 +47,6 @@ int CTest_Main::f_test_start_process ()
 
 
 	////////////////////////////////////////////////////////////////////
-	//  Power Supply On	
-	this->m_pFrdm->f_Voltage_Set(VOLTAGE_SET, "00");
-	f_delay_ms(100);
-
-	////////////////////////////////////////////////////////////////////
 	//	LIN Module Open
 	TS_CSPEC_SPECINFO_LIN	*pInfo;
 	pInfo = &this->m_pCSpec->m_stSpecInfo.Lin;
@@ -196,11 +191,6 @@ int CTest_Main::f_test_end_process ()
 		AfxMessageBox("Fail : LIN Close");
 	}
 
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
-	//  Power Supply Off
-	this->m_pFrdm->f_Voltage_Set(VOLTAGE_SET, "00");
-	f_delay_ms(100);
-
 	return TEST_CONTINUE;
 }
 
@@ -277,20 +267,6 @@ int CTest_Main::f_COMM_Meas_Voltage (unsigned p)
 	m_nRtn = f_testdata_judge_dbl(0, p, meas_data);
 	if (m_nRtn != TEST_CONTINUE) return m_nRtn;
 #endif // LIN_PROGRAM
-
-#ifdef LIN_PROGRAM_BOX
-	float	fValue;
-	char	buff[10];
-
-	sprintf_s(buff, sizeof(buff), "%0.2f\n", this->m_pCSpec->m_stSpecInfo.Lin.fVoltage);
-	this->m_pFrdm->f_Voltage_Set(VOLTAGE_SET, buff);
-	f_delay_ms(100);
-
-	fValue = this->m_pFrdm->f_Voltage_Read();
-	meas_data = (double)fValue;
-	m_nRtn = f_testdata_judge_dbl(0, p, meas_data);
-	if (m_nRtn != TEST_CONTINUE) return m_nRtn;
-#endif // LIN_PROGRAM_BOX
 
 	return 0;
 }

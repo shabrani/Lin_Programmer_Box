@@ -22,8 +22,6 @@
 
 #include "CLin_Func_Main.h"
 
-#include "CSerial_Func_FRDM.h"
-
 
 
 
@@ -49,8 +47,6 @@ public:
 	CFunc_DelayTime		m_dtElaspedTime;
 
 	CInst_PS_3645A		*m_pVsrc;
-
-	CSerial_Func_FRDM	*m_pFrdm;
 
 	CFunc_Spec_Item		*m_pTitem;
 	CFunc_Spec_Item		*m_pTitemPrev;

@@ -48,9 +48,6 @@
     <ClInclude Include="CTest_Main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CSerial_Func_Main.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CLin_Func_Main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -124,9 +121,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CInst_Main.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CSerial_Func_FRDM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CDlg_PasswordChange.h">
@@ -212,9 +206,6 @@
     <ClCompile Include="CTest_Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CSerial_Func_Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CLin_Func_Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -276,9 +267,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CInst_Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CSerial_Func_FRDM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CDlg_PasswordChange.cpp">

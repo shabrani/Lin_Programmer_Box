@@ -11,7 +11,6 @@ CTest_Base::CTest_Base(void)
 	m_pInst		 = new CInst_Main;
 	m_pBeep		 = new CFunc_Beep;
 
-	m_pFrdm		 = new CSerial_Func_FRDM;
 	m_pCTestData = new CFunc_TestData;
 	m_pCSaveDataAccess = new CFunc_TestData_SaveAccess;
 	{
@@ -38,7 +37,6 @@ CTest_Base::~CTest_Base(void)
 	delete m_pInst;
 	delete m_pBeep;
 	delete m_pCTestData;
-	delete m_pFrdm;
 	delete m_pCSaveDataAccess;
 }
 

@@ -1293,7 +1293,7 @@ int CTest_Main::f_kvr_LINREG_L9916_Verify (unsigned p)
 		sMessage.Format("#rdata %s", buff);
 
 		pCh = LPSTR(LPCTSTR(sMessage));
-		temp = this->m_pFrdm->f_cmd_and_read_cstring (pCh);
+//		temp = this->m_pFrdm->f_cmd_and_read_cstring (pCh);
 	}
 
 	CString sMessage, temp;
@@ -1306,7 +1306,7 @@ int CTest_Main::f_kvr_LINREG_L9916_Verify (unsigned p)
 	sMessage.Format("#veri");
 
 	pCh = LPSTR(LPCTSTR(sMessage));
-	temp = this->m_pFrdm->f_cmd_and_read_cstring (pCh);
+//	temp = this->m_pFrdm->f_cmd_and_read_cstring (pCh);
 
 
 	AfxExtractSubString(Addr00, temp, 0, ',');
@@ -1387,7 +1387,7 @@ int CTest_Main::f_kvr_LINREG_L9916_Program_and_Verify (unsigned p)
 		sMessage.Format("#rdata %s", buff);
 
 		pCh = LPSTR(LPCTSTR(sMessage));
-		temp = this->m_pFrdm->f_cmd_and_read_cstring (pCh);
+//		temp = this->m_pFrdm->f_cmd_and_read_cstring (pCh);
 	}
 
 	// Write : #rburn\r
@@ -1399,7 +1399,7 @@ int CTest_Main::f_kvr_LINREG_L9916_Program_and_Verify (unsigned p)
 	sMessage.Format("#pandv");
 
 	pCh = LPSTR(LPCTSTR(sMessage));
-	temp = this->m_pFrdm->f_cmd_and_read_cstring (pCh);
+//	temp = this->m_pFrdm->f_cmd_and_read_cstring (pCh);
 	temp = temp.Mid(8);
 
 	AfxExtractSubString(Addr00, temp, 0, ',');

@@ -706,16 +706,11 @@ void CLIN_ProgrammingView::ClickBtnRetest()
 	this->f_Test_Start();
 }
 
-void CLIN_ProgrammingView::ClickCwnEx()
+void CLIN_ProgrammingView::ClickCwnEx() 
 {
-//	char temp;
-//	int num;
+	// HDLR 상태 읽기
+//	pTest->m_pFrdm->f_Read_Buffer(HDLR_ERR, &m_edit_ex);
 
-//	bool bRtn = pTest->m_pFrdm->f_cmd_and_read_buf(HDLR_ERR, &m_edit_ex);
-//	temp = pTest->m_pFrdm->f_Read_Message(HDLR_ERR);
-//	num = (int)temp;
-//	m_edit_ex.Format("%d", num);
-	pTest->m_pFrdm->f_Read_Buffer(HDLR_ERR, &m_edit_ex);
 	this->UpdateData (FALSE);
 }
 

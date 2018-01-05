@@ -45,8 +45,7 @@ DWORD WINAPI Thread_MainCmd_Test(LPVOID temp)
 
 	if( pTest->m_cState.Status.isHdlrOn )
 	{
-		pTest->m_pFrdm->f_Clear_Output();
-		pTest->m_pFrdm->f_Send_Signal("bset", " pf", " 80"); // RUN
+		// 보드로 보내는 시리얼 신호
 	}
 
 	WndDisplay_TestResultInit    (0, 1);
@@ -70,10 +69,8 @@ DWORD WINAPI Thread_MainCmd_Test(LPVOID temp)
 		{
 			if (false == pTest->m_cState.Status.isHdlrOn) break;
 
-			int temp;
-			temp = pTest->m_pFrdm->f_Check_Signal("ireq", " pf", " 01"); // START
-
-			if (0x01 == (temp&0x01)) break;
+			// 보드로 보내는 시리얼 신호 // START Signal
+//			if (0x01 == (temp&0x01)) break;
 
 			WndDisplay_TestStatusMsg("Start Signal Detecting...","");
 
@@ -84,27 +81,27 @@ DWORD WINAPI Thread_MainCmd_Test(LPVOID temp)
 		{
 			if(true == bResult)
 			{
-				pTest->m_pFrdm->f_Send_Signal("bset", " pc", " 01"); // OK
+				// 보드로 보내는 시리얼 신호 // OK
 			}
 			else
 			{
-				pTest->m_pFrdm->f_Send_Signal("bset", " pc", " 02"); // NG
+				// 보드로 보내는 시리얼 신호 // NG
 			}
 			Sleep(100);
-//			pTest->m_pFrdm->f_Send_Signal("bset", " pc", " 04"); // EOT
+			// 보드로 보내는 시리얼 신호 // EOT
 		}
 		else
 		{
 			if(true == bResult)
 			{
-				pTest->m_pFrdm->f_Send_Signal("bset", " pc", " 01"); // OK
+				// 보드로 보내는 시리얼 신호 // OK
 			}
 			else
 			{
-				pTest->m_pFrdm->f_Send_Signal("bset", " pc", " 02"); // NG
+				// 보드로 보내는 시리얼 신호 // NG
 			}
 			Sleep(100);
-//			pTest->m_pFrdm->f_Send_Signal("bset", " pc", " 04"); // EOT
+			// 보드로 보내는 시리얼 신호 // EOT
 		}
 
 	}
@@ -148,15 +145,15 @@ DWORD WINAPI Thread_waitTestSignal (LPVOID temp)
 			WndDisplay_TestStatusMsg("Start Signal Waiting...", szBuf);
 		}
 
-		int temp;
-		temp = pTest->m_pFrdm->f_Check_Signal("ireq", " pf", " 01");
+		// 보드에서 오는 시작신호 체크
+		/*
 		if (0x01 == (temp&0x01))
 		{
 			Sleep(10);
 			CFunc_UserMsg UserMsg;
 			UserMsg.f_Test_Start ();
 		}
-
+		*/
 	}
 
 	return 0;
