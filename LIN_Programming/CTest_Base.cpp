@@ -19,6 +19,9 @@ CTest_Base::CTest_Base(void)
 		m_pCSaveDataAccess->m_cfg.pts = &this->m_cState;
 	}
 
+	m_pMCU = new Comu_MCU;
+
+
 	m_cUserMsg.m_cfg.pts = &this->m_cState;
 
 
@@ -38,6 +41,7 @@ CTest_Base::~CTest_Base(void)
 	delete m_pBeep;
 	delete m_pCTestData;
 	delete m_pCSaveDataAccess;
+	delete m_pMCU;
 }
 
 

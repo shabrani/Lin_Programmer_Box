@@ -22,6 +22,7 @@
 
 #include "CLin_Func_Main.h"
 
+#include "Comu_MCU.h"
 
 
 
@@ -52,7 +53,7 @@ public:
 	CFunc_Spec_Item		*m_pTitemPrev;
 	CFunc_Spec_Item		*m_pTitemNext;
 
-
+	Comu_MCU            *m_pMCU;
 
 	CTest_State			m_cState;
 	CTest_System_Config m_Cfg;

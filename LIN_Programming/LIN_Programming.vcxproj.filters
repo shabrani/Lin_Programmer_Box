@@ -348,6 +348,12 @@
     <None Include="Comu_CSerial.cpp">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="Comu_MCU.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="Comu_MCU.cpp">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\LIN_ProgrammingDoc.ico">
