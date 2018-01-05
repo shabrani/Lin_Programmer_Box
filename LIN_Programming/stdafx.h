@@ -57,3 +57,6 @@
 #include <afxdlgs.h>
 #include <afxctl.h>
 using namespace NI;
+
+
+#include "Comu_CSerial.h"

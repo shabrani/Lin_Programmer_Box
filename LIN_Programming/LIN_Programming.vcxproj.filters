@@ -342,6 +342,12 @@
     <None Include="res\LIN_Programming.rc2">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="Comu_CSerial.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="Comu_CSerial.cpp">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\LIN_ProgrammingDoc.ico">

@@ -220,6 +220,8 @@
     <ResourceCompile Include="LIN_Programming.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Comu_CSerial.cpp" />
+    <None Include="Comu_CSerial.h" />
     <None Include="res\LIN_Programming.rc2" />
   </ItemGroup>
   <ItemGroup>
