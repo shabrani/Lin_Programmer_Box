@@ -1,6 +1,5 @@
 // LIN_ProgrammingView.h : interface of the CLIN_ProgrammingView class
 //
-
 #pragma once
 
 #include "resource.h"
