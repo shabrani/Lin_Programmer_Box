@@ -308,8 +308,6 @@ bool CFunc_Spec_File::f_extract_SpecInfo_LIN_from_CDatabase(CDatabase &database)
 
 bool CFunc_Spec_File::f_extract_SpecItem_MAIN_from_CDatabase(CDatabase &database)
 {
-	bool bYN;
-
 	CString sBuf;
 	CFunc_Spec_Item			temp_ftest;
 	CFunc_Spec_Item*		pTitem;

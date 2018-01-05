@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "CFunc_DB_Dao.h"
 
+#pragma warning (disable:4101)
+
 
 CFunc_DB_Dao::CFunc_DB_Dao(void)
 {
