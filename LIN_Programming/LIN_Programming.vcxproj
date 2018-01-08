@@ -56,7 +56,7 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>C:\Program Files %28x86%29\IVI Foundation\VISA\WinNT\include;C:\Program Files %28x86%29\National Instruments\MeasurementStudioVS2012\VCNET\Include;C:\Program Files %28x86%29\Kvaser\Canlib\INC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -138,6 +138,8 @@
     <ClInclude Include="CInst_Main.h" />
     <ClInclude Include="CLin_Data.h" />
     <ClInclude Include="CLin_Func_Main.h" />
+    <ClInclude Include="Comu_CSerial.h" />
+    <ClInclude Include="Comu_MCU.h" />
     <ClInclude Include="CTest_Base.h" />
     <ClInclude Include="CTest_Main.h" />
     <ClInclude Include="CTest_State.h" />
@@ -195,6 +197,8 @@
     <ClCompile Include="CInst_Main.cpp" />
     <ClCompile Include="CLin_Data.cpp" />
     <ClCompile Include="CLin_Func_Main.cpp" />
+    <ClCompile Include="Comu_CSerial.cpp" />
+    <ClCompile Include="Comu_MCU.cpp" />
     <ClCompile Include="CTest_Base.cpp" />
     <ClCompile Include="CTest_Main.cpp" />
     <ClCompile Include="CTest_Main_kvrLin.cpp" />
@@ -220,10 +224,6 @@
     <ResourceCompile Include="LIN_Programming.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Comu_CSerial.cpp" />
-    <None Include="Comu_CSerial.h" />
-    <None Include="Comu_MCU.cpp" />
-    <None Include="Comu_MCU.h" />
     <None Include="res\LIN_Programming.rc2" />
   </ItemGroup>
   <ItemGroup>

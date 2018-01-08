@@ -180,6 +180,12 @@
     <ClInclude Include="CFunc_Spec_Item_Main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Comu_CSerial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Comu_MCU.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LIN_Programming.cpp">
@@ -332,6 +338,12 @@
     <ClCompile Include="CFunc_Spec_Item_Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Comu_CSerial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Comu_MCU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LIN_Programming.rc">
@@ -341,18 +353,6 @@
   <ItemGroup>
     <None Include="res\LIN_Programming.rc2">
       <Filter>Resource Files</Filter>
-    </None>
-    <None Include="Comu_CSerial.h">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="Comu_CSerial.cpp">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="Comu_MCU.h">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="Comu_MCU.cpp">
-      <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

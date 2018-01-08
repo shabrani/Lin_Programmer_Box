@@ -182,18 +182,13 @@ int Comu_MCU::f_Communicate(BYTE *pWrite, UINT nCmdLen, BYTE *pRead, UINT nReadT
 	BYTE byRes[100];
 	int nRead, nWrite;
 
-	//if ( !Open() )
-	//	return 0;
-
-	bzero(byCmd, sizeof(byCmd));
+	memset(byCmd, 0, sizeof(byCmd));
 	memcpy(byCmd, pWrite, nCmdLen);
-	//byCmd[nCmdLen+3] = MakeBCC(&byCmd[1], nCmdLen+2);
 
 	nWrite = m_pCom->WriteDataMulti(byCmd, nCmdLen, 3000);
 	if (nWrite == 0) { return 0; }
 
-
-	bzero(byRes, sizeof(byRes));
+	memset(byRes, 0, sizeof(byRes));
 	nRead = m_pCom->ReadDelayData(byRes, sizeof(byRes), nReadTimeout);
 	if (nRead >0)
 	{
@@ -214,7 +209,7 @@ int Comu_MCU::f_cmd(char *pWrite)
 
 	m_send.nCmdLen = m_send.sCmd.GetLength();
 
-	bzero(m_send.byCmd, sizeof(m_send.byCmd));
+	memset(m_send.byCmd, 0, sizeof(m_send.byCmd));
 
 	for (int i = 0; i<m_send.nCmdLen; i++)
 		m_send.byCmd[i] = m_send.sCmd[i];
@@ -227,7 +222,7 @@ int Comu_MCU::f_cmd(char *pWrite)
 	if (m_send.nWriteLen == 0) { return 0; }
 
 
-	bzero(m_recv.byRecv, sizeof(m_recv.byRecv));
+	memset(m_recv.byRecv, 0, sizeof(m_recv.byRecv));
 	m_recv.nRecvLen = m_pCom->ReadDelayData(m_recv.byRecv, sizeof(m_recv.byRecv), 1000);
 
 
