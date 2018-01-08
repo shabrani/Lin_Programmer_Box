@@ -186,6 +186,12 @@
     <ClInclude Include="Comu_MCU.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CDlg_Diag_MCU_ComPort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Comm_CSerialThread_MFC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LIN_Programming.cpp">
@@ -342,6 +348,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Comu_MCU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlg_Diag_MCU_ComPort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Comm_CSerialThread_MFC.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

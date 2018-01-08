@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CDlg_DataFilePath.h" />
+    <ClInclude Include="CDlg_Diag_MCU_ComPort.h" />
     <ClInclude Include="CDlg_PasswordChange.h" />
     <ClInclude Include="CDlg_PasswordCheck.h" />
     <ClInclude Include="CDlg_Spec.h" />
@@ -138,6 +139,7 @@
     <ClInclude Include="CInst_Main.h" />
     <ClInclude Include="CLin_Data.h" />
     <ClInclude Include="CLin_Func_Main.h" />
+    <ClInclude Include="Comm_CSerialThread_MFC.h" />
     <ClInclude Include="Comu_CSerial.h" />
     <ClInclude Include="Comu_MCU.h" />
     <ClInclude Include="CTest_Base.h" />
@@ -165,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CDlg_DataFilePath.cpp" />
+    <ClCompile Include="CDlg_Diag_MCU_ComPort.cpp" />
     <ClCompile Include="CDlg_PasswordChange.cpp" />
     <ClCompile Include="CDlg_PasswordCheck.cpp" />
     <ClCompile Include="CDlg_Spec.cpp" />
@@ -197,6 +200,7 @@
     <ClCompile Include="CInst_Main.cpp" />
     <ClCompile Include="CLin_Data.cpp" />
     <ClCompile Include="CLin_Func_Main.cpp" />
+    <ClCompile Include="Comm_CSerialThread_MFC.cpp" />
     <ClCompile Include="Comu_CSerial.cpp" />
     <ClCompile Include="Comu_MCU.cpp" />
     <ClCompile Include="CTest_Base.cpp" />

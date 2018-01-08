@@ -34,6 +34,8 @@
 #define IDD_DIALOG1                     330
 #define IDD_DIALOG_L9916                330
 #define IDD_DIALOG_LIN2112              332
+#define IDD_DLG_DIAG_MCU_COMTEST        336
+#define IDC_EDIT_SEND                   1001
 #define IDC_LIN_PROGRAMER               1005
 #define IDC_BTN_SPEC                    1006
 #define IDC_CNB_SPEC_NAME               1007
@@ -149,12 +151,15 @@
 #define IDC_CWN_NVM_A03_H               1068
 #define IDC_CWN_NVM_A60                 1069
 #define IDC_COMBO_VERSION               1069
+#define IDC_BTN_IDN                     1069
 #define IDC_CWN_NVM_A70                 1070
 #define IDC_CWN_FID_TX1                 1070
+#define IDC_BTN_CONNECT                 1070
 #define IDC_CWN_NVM_A80                 1071
 #define IDC_CWN_FID_TX2                 1071
 #define IDC_CWN_FID_TX3                 1072
 #define IDC_COMBO_VERSION2              1072
+#define IDC_BTN_CLEAR_LIST              1072
 #define IDC_CWN_FID_TX4                 1073
 #define IDC_CWN_FID_TX5                 1074
 #define IDC_CWN_FID_TX6                 1075
@@ -166,6 +171,17 @@
 #define IDC_CWN_CURRENT                 1086
 #define IDC_CWN_OTP_ADDR00              1087
 #define IDC_CWN_OFFSET0_5               1088
+#define IDC_LIST_MSG                    1100
+#define IDC_CWB_PLC_IN_1                1119
+#define IDC_CWB_PLC_IN_2                1120
+#define IDC_CWB_MCU_PORT_CONNECTED      1168
+#define IDC_EDIT_COM_PORT               1169
+#define IDC_EDIT_BAUDRATE               1170
+#define IDC_CWB_PLC_OUT_1               1171
+#define IDC_CWB_PLC_OUT_2               1172
+#define IDC_CWB_PLC_OUT_3               1173
+#define IDC_CWB_PLC_OUT_4               1174
+#define IDC_BTN_SEND                    1795
 #define ID_MENU_SPEC_OPEN               32771
 #define ID_MENU_EXIT                    32772
 #define ID_EDIT_SPECEDIT                32773
@@ -179,14 +195,16 @@
 #define ID_DIAGNOSTIC_FRDM              32781
 #define ID_DIAGNOSTIC_E3641A            32782
 #define ID_DIAGNOSTIC_FRDM32783         32783
+#define ID_DIAGNOSTIC_32784             32784
+#define ID_MENU_DIAG_MCU_COMPORT        32785
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        334
-#define _APS_NEXT_COMMAND_VALUE         32784
-#define _APS_NEXT_CONTROL_VALUE         1089
+#define _APS_NEXT_RESOURCE_VALUE        339
+#define _APS_NEXT_COMMAND_VALUE         32786
+#define _APS_NEXT_CONTROL_VALUE         1090
 #define _APS_NEXT_SYMED_VALUE           310
 #endif
 #endif

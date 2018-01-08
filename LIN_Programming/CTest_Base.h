@@ -23,6 +23,7 @@
 #include "CLin_Func_Main.h"
 
 #include "Comu_MCU.h"
+#include "Comm_CSerialThread_MFC.h"
 
 
 
@@ -54,6 +55,7 @@ public:
 	CFunc_Spec_Item		*m_pTitemNext;
 
 	Comu_MCU            *m_pMCU;
+	Comm_CSerialThread_MFC  *m_pHdlr_Com;
 
 	CTest_State			m_cState;
 	CTest_System_Config m_Cfg;

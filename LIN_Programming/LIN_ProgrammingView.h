@@ -126,6 +126,7 @@ protected:
 	afx_msg void OnMenuSpecEdit (void);
 	afx_msg void OnMenuChangePassword();
 	afx_msg void OnMenuChangeDataFileSavePath();
+	afx_msg void OnMenuDiagMcuComport();
 protected:
 	DECLARE_EVENTSINK_MAP()
 	DECLARE_MESSAGE_MAP()

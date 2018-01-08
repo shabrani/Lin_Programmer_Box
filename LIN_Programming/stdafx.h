@@ -58,5 +58,35 @@
 #include <afxctl.h>
 using namespace NI;
 
+#define	WM_ASYNC_SELECT					( WM_USER + 4000 )
+#define	WM_ASYNC_SELECT_0				( WM_USER + 4000 )
+#define	WM_ASYNC_SELECT_1				( WM_USER + 4001 )
+
+//#define	WM_DEVICE_BARCODE_CLOSE_0		( WM_USER + 4010 )
+//#define	WM_DEVICE_BARCODE_CLOSE_1		( WM_USER + 4011 )
+//#define	WM_DEVICE_BARCODE_CONNECT_0		( WM_USER + 4012 )
+//#define	WM_DEVICE_BARCODE_CONNECT_1		( WM_USER + 4013 )
+
+#define WM_DEVICE_HDLR_PORT_CONNECTED        ( WM_USER + 4014 )
+#define WM_DEVICE_HDLR_PORT_CLOSEED          ( WM_USER + 4015 )
+#define WM_DEVICE_HDLR_PORT_RECEIVE          ( WM_USER + 4016 )
+
+#define WM_DEVICE_MCU_PORT_CLOSEED           ( WM_USER + 4017 )
+#define WM_DEVICE_MCU_PORT_CONNECTED         ( WM_USER + 4018 )
+
+
+
+#define	WM_DEVICE_CLOSE_0				( WM_USER + 4020 )
+#define	WM_DEVICE_CLOSE_1				( WM_USER + 4021 )
+#define	WM_DEVICE_CONNECT_0				( WM_USER + 4022 )
+#define	WM_DEVICE_CONNECT_1				( WM_USER + 4023 )
+
+
+
+#define	BUF_SIZE						( 9999 + 6 )
+#define	IP4_SIZE						( 15 )
+
+#define	bzero(p, l)				( memset(p, 0, l) )
+
 
 #include "Comu_CSerial.h"

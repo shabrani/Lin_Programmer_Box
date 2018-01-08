@@ -2,7 +2,8 @@
 #include "Comu_MCU.h"
 #include "CFunc_Reg.h"
 
-#define CH_TERM 13   //CR 
+#define CH_TERM 13   //CR
+#define SIM_MCU_MUX
 
 Comu_MCU::Comu_MCU()
 {

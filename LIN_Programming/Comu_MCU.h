@@ -88,12 +88,6 @@ public:
 		CString sCmd;	//
 	}m_send;
 
-
-
-
-	//======================================================================================
-private:
-
 	struct
 	{
 		char szPort[10];
@@ -106,6 +100,9 @@ private:
 
 	bool  f_Open(LPSTR szPort, UINT nBaudRate);
 	bool  f_Open();
+
+
+private:
 	int   f_Communicate(BYTE *pWrite, UINT nCmdLen, BYTE *pRead, UINT nReadTimeout);
 
 

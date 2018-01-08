@@ -27,6 +27,7 @@
 #include "CDlg_PasswordCheck.h"
 #include "CDlg_PasswordChange.h"
 #include "CDlg_DataFilePath.h"
+#include "CDlg_Diag_MCU_ComPort.h"
 
 #include "Rijndael.h"
 
@@ -81,7 +82,7 @@ BEGIN_MESSAGE_MAP(CLIN_ProgrammingView, CFormView)
 	ON_COMMAND(ID_MENU_SPECEDIT,	OnMenuSpecEdit)
 	ON_COMMAND(ID_MENU_CHANGEPASSWORD, OnMenuChangePassword)
 	ON_COMMAND(ID_EDIT_DATAFILESAVEPATH, OnMenuChangeDataFileSavePath)
-
+	ON_COMMAND(ID_MENU_DIAG_MCU_COMPORT, OnMenuDiagMcuComport)
 
 END_MESSAGE_MAP()
 
@@ -595,6 +596,17 @@ void CLIN_ProgrammingView::OnMenuChangeDataFileSavePath()
 
 	CDlg_DataFilePath dlg;
 	dlg.DoModal ();	
+}
+
+
+void CLIN_ProgrammingView::OnMenuDiagMcuComport()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	::CDlg_Diag_MCU_ComPort dlg;
+
+	dlg.m_cfg.pTest = pTest;
+
+	dlg.DoModal();
 }
 
 

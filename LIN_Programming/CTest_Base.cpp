@@ -20,6 +20,7 @@ CTest_Base::CTest_Base(void)
 	}
 
 	m_pMCU = new Comu_MCU;
+	m_pHdlr_Com = new Comm_CSerialThread_MFC;
 
 
 	m_cUserMsg.m_cfg.pts = &this->m_cState;
@@ -42,6 +43,7 @@ CTest_Base::~CTest_Base(void)
 	delete m_pCTestData;
 	delete m_pCSaveDataAccess;
 	delete m_pMCU;
+	delete m_pHdlr_Com;
 }
 
 
